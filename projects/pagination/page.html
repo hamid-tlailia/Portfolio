@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="radio-button.png">
+    <link rel="stylesheet" href="page.css">
+    <title>Pagination</title>
+</head>
+<body>
+
+   <div class="container">
+       <span>Image <p id="number" style="color: blue;width: 15px;height: 30px;
+        text-align: center;">1</p>   of 4</span>
+    <div class="pages active" data-index="1">
+        <img src="img1.jpg" alt="imd">
+    </div>
+    <div class="pages" data-index="2">
+        <img src="img2.jpg" alt="imd"> </div>
+    <div class="pages" data-index="3">
+        <img src="img3.jpg" alt="imd">
+    </div>
+    <div class="pages" data-index="4">
+        <img src="img4.jpg" alt="imd">
+    </div>
+    <div class="footer">
+        <table>
+            <tbody>
+                <tr>
+                    <td id="prev"><</td>
+                    <td class="td active" id="td1" data-index="1">1</td>
+                    <td class="td" data-index="2">2</td>
+                    <td class="td"  data-index="3">3</td>
+                    <td class="td" data-index="4">4</td>
+                    <td id="next">></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   </div>
+    <script src="page.js"></script>
+</body>
+</html>

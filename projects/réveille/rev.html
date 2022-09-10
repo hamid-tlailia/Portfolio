@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="rev.css">
+    <title>Réveille</title>
+</head>
+<body>
+  <!-- content start-->
+   <div class="container   p-4 mt-5">
+<div class="card p-2">
+    <!--alert start-->
+    <div id="place" class="alert-danger text-center"></div>
+    <!-- card header start-->
+<div class="card-header">
+<h1 class="text-center text-primary p-1">My <span class="text-danger"><i class="fas fa-music title"></i> Auto</span><span class="text-success">
+    <i class="fas fa-guitar title"></i> Réveille</span></h1>
+</div>
+<!-- card body start-->
+<div class="card-body">
+<div class="sound">
+    <audio src="images and audio/sound.mp3" controls="true" style="display: none;" id="audio"></audio>
+</div>
+<div class="row text-center bg-info p-2">
+    <div class="col-sm-12 col-lg-3 col-md-4 text-center mb-2"><i class="fas fa-music text-success mt-2 bg-white rounded-circle p-4" style="font-size: 45px;"  id="music"></i></div>
+    <div class="col-sm-12 bg-dark p-2  col-lg-6 col-md-4 ">
+        <input type="number" class="form-control p-1 text-center" value="00" id="time" min="0" max="59" style="border-radius: 0;background: gainsboro;
+        outline: none;border: none;color: blue;">
+        <button class="btn btn-danger mt-2" id="btn" style="font-size: 20px;"><i class="fa fa-play" id="icon" style="font-size: 20px;"></i>
+             <span id="play">Play</span></button>
+    </div>
+    <div class="col-sm-12 col-lg-3 col-md-4">
+        <img src="images and audio/sound.jpg" class="rounded-circle image-fluid mt-2" alt="music" height="90" width="90" id="image">
+    </div>
+</div>
+</div>
+<!-- card footer start -->
+<div class="card-footer">
+<div class="row text-center  p-sm-0">
+  <div class="col-sm-12" >
+    <span class="stroke"></span>
+    <span class="stroke"></span>
+    <span class="stroke"></span>
+    <span class="stroke"></span>
+    <span class="stroke"></span>
+    <span class="stroke"></span>
+    <span class="stroke"></span>  
+  </div>                
+</div>
+</div>
+</div>
+   </div> 
+   <!-- content end-->
+   <!--javascript start-->
+   <script  type="text/javascript" src="rev.js"></script>
+   <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+></script>
+</body>
+</html>

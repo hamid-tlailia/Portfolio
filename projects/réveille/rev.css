@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body ,html{
+    background: darkcyan;
+}
+
+#image.active{
+    animation: 3s infinite linear fade;
+}
+@keyframes fade{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+
+#music.active{
+    animation: 3s infinite linear rotate;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(360deg);
+    }to{
+        transform: rotate(0deg);
+    }
+}
+
+.title{
+    font-size: 15px;
+}
+
+ .stroke{
+     padding: 5px;
+    background: yellow;
+    height: 190px;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0px 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate{
+    50%{
+        height: 20px;
+        background: #4286f4;
+    }
+    100%{
+        height: 190px;
+    }
+}
+.stroke:nth-child(1){
+    animation-delay: 0s;
+}
+.stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7){
+    animation-delay: 0s;
+}
+
+.container{
+    background: none;
+    max-width: 60%;
+}
+@media only screen and (max-width:940px){
+    .container{
+        max-width: 100%;
+    }
+}

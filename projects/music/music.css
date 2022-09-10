@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body ,html{
+    background:  linear-gradient(to right, rgb(97, 231, 201), rgb(147, 60, 9));
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container{
+    width: 30%;
+    height: 55%;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    transform: translate(110%, 15%);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container span{
+    width: 70%;
+    padding: 10px;
+    height: 20%;
+    background: none;
+   
+    position: absolute;
+    margin-left: -40%;
+}
+
+audio{
+    background-color: red;
+    color: blue;
+}
+
+.fas{
+    font-size: 25px;
+    transition: .5s;
+}
+
+button{
+    background-color: red;color: white;
+        margin-top: 77%;padding: 5px;width: 40px;border: none;cursor: pointer;border-radius: 50%;z-index: 1000;
+}
+
+.volume{
+    position: absolute;margin-top: -32%;background-color: white;height: 15%;margin-left: -41%;
+    
+}
+
+.prog{
+    position: absolute;margin-top: -27%;background-color: white;display: flex;flex-direction: row;padding-left: 20px;
+   margin-left: 52%;height: 5%;
+   
+}
+
+.prog p{
+    margin-top: 6px;
+}
+
+.rotate{
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+@media screen and (max-width:1349px) and (min-width:1131px) {
+    button{
+        background-color: red;color: white;
+            margin-top: 57%;padding: 5px;width: 40px;border: none;cursor: pointer;border-radius: 50%;
+    }
+    .volume{
+        position: absolute;margin-top: -36%;background-color: white;height: 10%;margin-left: -41%;
+    }
+
+    .prog{
+        position: absolute;margin-top: -29%;background-color: white;display: flex;flex-direction: row;padding-left: 20px;
+       margin-left: 22%;height: 10%;
+    }
+
+    .prog p{
+        margin-top: 6px;
+    }
+}
+
+.loader{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wave{
+    margin-top: 10%;
+}
+.loader .stroke{
+    background: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0px 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate{
+    50%{
+        height: 20%;
+        background: #4286f4;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.stroke:nth-child(1){
+    animation-delay: 0s;
+}
+.stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7){
+    animation-delay: 0s;
+}

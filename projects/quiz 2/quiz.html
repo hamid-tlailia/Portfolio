@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Quiz</title>
+    <link rel="shortcut icon" href="quiz.png">
+    <script src="https://kit.fontawesome.com/3343e0a8c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="black">
+        <button type="button" id="start">Start-Quiz</button>
+    </div>
+
+    
+        <span class="affiche">
+      <h2 style="color: red;width: 100% ;text-align: center;">Some quiz's recomendations:</h2>
+      <hr>
+      <span style="display: flex;flex-direction: column;justify-content: space-evenly;width: 100%;
+      height: 50%;text-align: left;padding-left: 60px;font-weight: bold;font-family: 'Courier New', Courier, monospace;">
+          <p>1- Vous avez <span style="color: red;font-size: 20px;">15 s</span> pour répondre à chaque question</p>
+          <p>2- Vous n'avez pas le droit de rater le question</p>
+          <p>3- Chaque question a <span style="color: forestgreen;font-size: 20px;">3</span> propositions</p>
+          <p>4- Chaque question a un seul réponse correct</p>
+          <p>5- Vous avez comme total <span style="color: blue;font-size: 20px;">10 Question</span></p>
+      </span>
+      <hr>
+      <span style="text-align: right;padding: 5px;">
+          <button type="button" style="background-color: blue;color: floralwhite;font-weight: bold;border: none;padding: 5px;
+          border-radius: 5px;cursor: pointer;" id="yes">D'accord</button>
+          <button type="button" style="background-color: whitesmoke;color: black;font-weight: bold;border: none;padding: 5px;
+          border-radius: 5px;cursor: pointer;" id="no"> Pas d'accord</button>
+      </span>
+        </span>
+
+        <div class="container">
+            <span class="notice">أسرع ,الوقت يكاد ينتهي</span>
+            <span class="note">Note : <p id="note"  style="color: red;font-weight: bold;">0</p>/10</span>
+            <h3 style="color: cyan;font-weight: bold;">Répondre aux questions suivantes :</h3>
+            <span class="time">00: <p id="timer" style="color: green;font-weight: bold;">15</p>s</span>
+            <div class="content">
+                <div id="q1" class="bloks active">
+                    <h2 style="display: flex;flex-direction: row;"> ماهي أول صلاة مفروضة  ؟ <p style="color: chocolate;"> :1</p></h2>
+                    <span class="option">صلاة العصر</span>
+                    <span class="option correct">صلاة الظهر</span>
+                    <span class="option">صلاة الفجر</span>
+                    <p class="res"></p>
+                </div>
+            <div id="q2" class="bloks">
+                <h2 style="display: flex;flex-direction: row;">من أول من بنى الكعبة ؟  <p style="color: chocolate;"> :2</p></h2>
+                    <span class="option">ابراهيم الخليل </span>
+                    <span class="option ">اسماعيل ابن ابراهيم </span>
+                    <span class="option correct"> ابراهيم و اسماعيل معا</span>
+                    <p class="res"></p>
+            </div>
+            <div id="q3" class="bloks">
+                <h2 style="display: flex;flex-direction: row;">ماهي أول معركة في الاسلام ؟  <p style="color: chocolate;"> :3</p></h2>
+                <span class="option">معركة أحد </span>
+                <span class="option "> معركة حنين  </span>
+                <span class="option correct">   معركة الخندق</span>
+                <p class="res"></p>
+            </div>
+            <div id="q4" class="bloks">
+                <h2 style="display: flex;flex-direction: row;">من هو النبي الذي رفع الى السماء؟ <p style="color: chocolate;"> :4</p></h2>
+                <span class="option">ابراهيم الخليل </span>
+                <span class="option correct">موسى عليه السلام </span>
+                <span class="option ">  محمد رسول الله</span>
+                <p class="res"></p>
+            </div>
+            <!-- questions added-->
+
+<div id="q5" class="bloks">
+    <h2 style="display: flex;flex-direction: row;">كم عدد الصلواة المفروضة ؟ <p style="color: chocolate;"> :5</p></h2>
+    <span class="option correct"> خمس صلوات </span>
+    <span class="option ">   ثلاث صلوات </span>
+    <span class="option">   عشر صلوات  </span>
+    <p class="res"></p>
+</div>
+<div id="q6" class="bloks">
+    <h2 style="display: flex;flex-direction: row;">كم عدد آيات القرآن الكريم ؟  <p style="color: chocolate;"> :6</p></h2>
+    <span class="option correct">  6200 </span>
+    <span class="option ">    5300 </span>
+    <span class="option">    10000  </span>
+    <p class="res"></p>
+</div>
+<div id="q7" class="bloks">
+    <h2 style="display: flex;flex-direction: row;">سورة تسمى بالفاضحة ؟  <p style="color: chocolate;"> :7</p></h2>
+    <span class="option ">  سورة القمر </span>
+    <span class="option  correct">   سورة التوبة </span>
+    <span class="option">   سورة النور  </span>
+    <p class="res"></p>
+</div>
+<div id="q8" class="bloks">
+    <h2 style="display: flex;flex-direction: row;">من هو سيف الله المسلول ؟  <p style="color: chocolate;"> :8</p></h2>
+    <span class="option ">   الأسد ابن الحارث  </span>
+    <span class="option ">    عبد الله ابن مسعود  </span>
+    <span class="option correct">    خالد بن الوليد   </span>
+    <p class="res"></p>
+</div>
+<div id="q9" class="bloks">
+    <h2 style="display: flex;flex-direction: row;">كم عدد الأشهر الحرم  ؟  <p style="color: chocolate;"> :9</p></h2>
+    <span class="option ">   خمسة أشهر  </span>
+    <span class="option ">   عشرة أشهر   </span>
+    <span class="option correct">    أربعة أشهر   </span>
+    <p class="res"></p>
+</div>
+<!--questions added-->
+            <div id="q10" class="bloks">
+                <h2 style="display: flex;flex-direction: row;">في أي غزوة قتل أبو الحكم ؟  <p style="color: chocolate;"> :10</p></h2>
+                <span class="option"> غزوة مكة </span>
+                <span class="option ">  غزوة الأحزاب </span>
+                <span class="option correct last" id="last">  غزوة بدر  </span>
+                <p class="res"></p>
+            </div>
+
+            <div class="bloks" id="final">
+                <h1 style="color: red;width: 100%;text-align: center;background-color: white;">Votre score Quiz 😍</h1>
+                <span  style="color: floralwhite;width: 100%;background-color: green;display: flex;flex-direction: row;align-items:
+                 center;text-align: center;
+                padding-left: 20%;font-size: 30px;">
+                vous avez <p id="score" style="color: red;font-size: 35px;margin: 10px;
+                    "></p> sur 10</span> 
+                    <h1 style="color: forestgreen;width: 70%;text-align: center;background-color: white;
+                    display: flex;flex-direction: row;padding: 4px;">Result : <p id="op"
+                        style="color: fuchsia;font-size: 25px;margin-top: 6px;"></p></h1>
+
+                        <span style="display: flex;flex-direction: row;width: 90%;justify-content: space-around;background-color: black;
+                        color: greenyellow;">
+                            <h4 style="display: flex;flex-direction: row;font-size: 20px;">Social Media : <p>
+                                <i class="fab fa-facebook-square" style="color: darkblue;cursor: pointer;"></i>
+                                <i class="fab fa-youtube" style="color: red;cursor: pointer;"></i>
+                                <i class="fab fa-twitter-square" style="color: skyblue;cursor: pointer;"></i>
+                            </p></h4>
+                            <button type="button" style="background-color: green;color: floralwhite;
+                            font-weight: bold;border: none;border-radius: 5px;width: 90px;
+                            padding: 5px;cursor: pointer;" onclick="roload()">Restart <i class="fas fa-redo-alt"></i></button>
+                        </span>
+            </div>
+
+            </div>
+           
+        </div>
+        <span style="background-color: darkblue;width: 40%;height: 4.8%;position: absolute;
+        margin: 32.6% 0 0 30%;overflow: hidden;"></span>
+        <span><button type="button" id="result">Result</button></span>
+        <span><button type="button" id="next" class="active" onclick="nextOption()">Next</button></span>
+       
+    <div class="flou"></div>
+
+    
+    <span class="over">
+        <h1>Attention !</h1>
+        <hr>
+        <p>Le temps de Quiz est terminé</p>
+        <p>merci de la recommencer</p>
+        <hr>
+        <button type="button" id="refresh" onclick="restart()">OK</button>
+    </span>
+    <script src="quiz.js"></script>
+</body>
+</html>
