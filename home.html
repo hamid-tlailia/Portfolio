@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+rel="stylesheet"
+/>
+<script type = " text/javascript " src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" > </script>
+<script type =" text/javascript ">
+  (function() {
+    emailjs.init("JgnJY3IJDvvpSS4nX") ;
+    })();
+</script>
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/pf-logo.png">
+    <title>Portfolio</title>
+</head>
+<body>
+<!-- Global container -->
+<div class="container-fluid ">
+    <div class="row p-3 d-lg-none d-md-none w-100 bg-white mb-2 border-bottom align-items-center" style="z-index: 5;position: fixed;top: 0;width: 100%;left: 1.5vh;right: 0;">
+        <div class="col-6 ">
+          <button class="btn btn-dark w-auto text-white" id="toggle-nav"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="col-6 text-end"><img src="images/pf.png" class="img-fluid" width="100" height="100" alt="logo" ></div>
+    </div>
+<div class="row">
+    <!-- side nav -->
+    <div class="col-lg-3 col-md-4  nav">
+       <aside class="sidenav d-none d-lg-block d-md-block" id="nav">
+        <div class="row mb-4 d-lg-none d-md-none ">
+            <div class="col-12 text-end"><button class="btn btn-transparent pe-all w-auto text-danger shadow-0 fs-5 btn-floating" id="hide-nav">
+                <i class="fas fa-close"></i></button></div>
+        </div>
+        <div class="text-start mb-5">
+            <span><img src="images/hamid-removebg.png" class="logo img-fluid " alt="logo"></span>
+        </div>
+   <!-- Tab navs -->
+   <div
+   class="nav d-flex w-100 flex-column justify-content-between align-items-center justify-items-center nav-tabs text-start"
+   id="v-tabs-tab"
+   role="tablist"
+   aria-orientation="vertical"
+ >
+   <a
+     class="nav-link mb-3 w-75 active"
+     id="tabs"
+     data-index="1"
+     ><i class="fas fa-home text-danger"></i>&nbsp;&nbsp; Home</a
+   >
+   <a
+     class="nav-link mb-3 w-75"
+     id="tabs"
+     data-index="2"
+     ><i class="fas fa-user-alt text-danger"></i>&nbsp;&nbsp; About</a
+   >
+   <a
+     class="nav-link mb-3 w-75"
+     id="tabs"
+     data-index="3"
+     ><i class="fas fa-tasks text-danger"></i>&nbsp;&nbsp; Services</a
+   >
+   <a
+   class="nav-link mb-3 w-75"
+   id="tabs"
+   data-index="4"
+   ><i class="fas fa-folder-open text-danger"></i>&nbsp;&nbsp; Projects</a
+ >
+ <a
+ class="nav-link mb-3 w-75"
+ id="tabs"
+ data-index="5"
+ ><i class="fas fa-comments text-danger"></i>&nbsp;&nbsp; Contact</a
+>
+ </div>
+ <!-- Tab navs -->
+       </aside>
+    </div>
+    <!-- content -->
+    <div class="col-lg-8 col-md-7  content p-3 mb-3">
+<!-- home section  -->
+<section class="about active" id="onglets" data-index="1" style="overflow-y: auto">
+   <div class="container-fluid p-3 ">
+    <h3 >Home section</h3>
+<!-- intro -->
+<div class="row p-3 align-items-center" style="background:url(images/port.jpg) ;background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <div class="col-lg-8" style="max-height: 35vh">
+      <div class="lead  p-4 rounded-0 intro" style="font-family: 'Source Code Pro', monospace;">
+          <h4 class="text-success mb-3 fs-3">Hi ! welcome <span class="text-white">my name is</span> <span class="text-info" style="font-family: 'Pacifico', cursive;">Hamid Tlailia</span></h4>
+          <h5>I am 
+          <span class="txt-rotate text-start" data-period="2000"
+              data-rotate='[ "a FullStack web developer","a web designer.", "a Web developer." ]'></span>
+      </h5>
+      </div>
+  </div>
+  <div class="col-lg-4 text-end">
+    <div class="wrap">
+  <a href="docs/CV Hamid Tlailia (Anglais).docx" download><button class="button"><i class="fas fa-arrow-circle-down"></i> Download cv</button></a>
+</div>
+  </div>
+</div>
+</div>
+<!-- /intro -->
+    <!-- skills -->
+<!--
+Lets start with a single html5 progress element. Currently our progress bar is in the indeterminate state. Lets change the status by adding 'max' and 'value' attribute to our progress element.
+
+We are almost done styling a single progress bar, except adding fallback technique for browsers that do not support progress element. The idea is to simulate the visual styles of the progress bar using `div` and `span`.
+
+Note:- To imitate the older browsers and help us style the fallback technique, we wil temporarily comment-out the progress tag.
+-->
+
+<ul class="row mb-0 border border-bottom p-3" >
+  <li class="col-lg-6">
+    <p class="fs-2 text-warning shadow-1-strong text-center">Frontend</p>
+    
+    <!-- HTML5 -->
+    <p style="width:80%" data-value="100">HTML5</p>
+    <progress max="100" value="100" class="html5">
+      <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+      <div class="progress-bar">
+        <span style="width: 100%">100%</span>
+      </div>
+    </progress>
+    
+    <!-- CSS3 -->
+    <p style="width:60%" data-value="80">CSS3</p>
+    <progress max="100" value="80" class="css3">
+      <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+      <div class="progress-bar">
+        <span style="width: 60%">80%</span>
+      </div>
+    </progress>
+    
+    <!-- jQuery -->
+    <p style="width:50%" data-value="70">Javascript</p>
+    <progress max="100" value="70" class="jquery">
+      <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+      <div class="progress-bar">
+        <span style="width: 70%">70%</span>
+      </div>
+    </progress>
+    
+  </li>
+  <li class="col-lg-6">
+    <p class="fs-2 text-warning shadow-1-strong text-center">Backend</p>
+  
+    <!-- PHP -->
+    <p style="width:65%" data-value="65">PHP</p>
+    <progress max="100" value="65" class="php">
+      <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+      <div class="progress-bar">
+        <span style="width: 65%">65%</span>
+      </div>
+    </progress>
+    
+    <!-- Node.js -->
+    <p style="width:35%" data-value="35">MySql</p>
+    <progress max="100" value="35" class="node-js">
+      <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+      <div class="progress-bar">
+        <span style="width: 35%">80%</span>
+      </div>
+    </progress>   
+    
+  </li>
+</ul>
+    <!-- /skills -->
+    <!-- social -->
+    <div class="container-sm p-5  text-center mb-5 mt-0">
+      <a href="https://www.facebook.com/profile.php?id=100026283606856" target="_blank">
+      <button type="button" class="btn btn-primary btn-lg btn-floating">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+    </a>
+  <!-- Instagram -->
+  
+<a href="https://www.instagram.com/happy_life_animal/" class="btn text-white btn-floating" style="background-color: #ac2bac;"  role="button"target="_blank" >
+  <i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.youtube.com/channel/UCe8L741BWFzQ_2fYREh0aVQ" target="_blank">
+      <button type="button" class="btn btn-danger btn-floating">
+        <i class="fab fa-youtube"></i>
+      </button>
+    </a>
+    <a href="https://github.com/hamid-tlailia" target="_blank">
+      <button type="button" class="btn btn-dark btn-floating">
+        <i class="fab fa-github"></i>
+      </button>
+    </a>
+     </div>
+    <!-- /social -->
+   </div>
+
+</section>
+<!-- about section -->
+<div class="about" id="onglets" data-index="2" style="background:url(images/port.jpg) ;background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <h2 class="mt-1">About
+    <span class="text-danger">Us</span></h2>
+    <section class="about-us" id="about">
+      <div class="container-sm mb-5 pb-5">
+          <div class="row align-items-center border-bottom border-white">
+              <div class="col-lg-4 text-center text-lg-start">
+                  <img src="images/hamid-removebg.png" alt="about" class="img-fluid rounded-circle" width="250" height="250" >
+              </div>
+              <div class="col-lg-8 pt-3">
+                  <h3 class="text-decoration-underline text-info">More infos about us </h3>
+                  <p class="text-white" style="font-family:Georgia, 'Times New Roman', Times, serif;">Hi There, I’m Vishal and i am Front-End Web Developer. It's been 2 years, I’m working as web developer.i have developed many website and also provided my services to college students by getting their projects ready ASAP as a freelancer I have been part of some very good web design projects.
+<br>
+<i class="fab fa-windows text-warning"></i> I have done my graduation in Computer Science.
+                    <br>
+                    <i class="fab fa-windows text-warning"></i>  My Skill Set : HTML5, CSS3, JavaScript, PHP, MYSQL
+                    <br>
+                    <i class="fab fa-windows text-warning"></i>  I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.</p>
+                  <div class="row mb-5">
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>Awesome Design</h4>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>
+                              Creative Design</h4>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>Better Client Service</h4>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>
+                               Marketing & Branding</h4>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>UI Design</h4>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="text-warning">
+                              <i class="far fa-star"></i>
+                              Speed And Flexibility</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- skills life -->
+  
+        <div class="row p-0 bg-dark">
+          <section class="col-lg-6 mb-4  p-3">
+            <div class="rt-container">
+                  <div class="col-rt-12">
+                      <div class="Scriptcontent">
+                      
+               <!-- Stepper HTML -->
+        <div class="step">
+          <div>
+            <div class="circle"><i class="fa fa-check"></i></div>
+          </div>
+          <div>
+            <div class="title">Education</div>
+            <div class="caption">BAC + 3</div>
+          </div>
+        </div>
+        <div class="step step-active">
+          <div>
+            <div class="circle"><i class="fa fa-check"></i></div>
+          </div>
+          <div>
+            <div class="title">Diplomas</div>
+              <div class="caption">BAC + Licence in Marketing</div>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <div class="circle"><i class="fa fa-check"></i></div>
+          </div>
+          <div>
+            <div class="title">Certificates</div>
+              <div class="caption">Work certificate + Soft skills </div>
+          </div>
+        </div>
+                          
+        <div class="step">
+          <div>
+            <div class="circle"><i class="fa fa-check"></i></div>
+          </div>
+          <div>
+            <div class="title">Programmation</div>
+            <div class="caption">HTML + CSS + JAVASCRIPT + PHP + MYSQL</div>
+          </div>
+        </div>
+        <!-- End Stepper HTML -->
+                
+                   
+                </div>
+            </div>
+            </div>
+        </section>
+        <hr class="d-lg-none">
+        <section class="col-lg-6 mb-4 p-3 ">
+          <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="Scriptcontent">
+                
+         <!-- Stepper HTML -->
+  <div class="step">
+    <div>
+      <div class="circle"><i class="fa fa-check"></i></div>
+    </div>
+    <div>
+      <div class="title">Framework</div>
+      <div class="caption">Bootstrap + ReactJS (in progress...)</div>
+    </div>
+  </div>
+  <div class="step step-active">
+    <div>
+      <div class="circle"><i class="fa fa-check"></i></div>
+    </div>
+    <div>
+      <div class="title">Full name</div>
+        <div class="caption">Hamid Tlailia</div>
+    </div>
+  </div>
+  <div class="step">
+    <div>
+      <div class="circle"><i class="fa fa-check"></i></div>
+    </div>
+    <div>
+      <div class="title">Age + situation</div>
+        <div class="caption">24 years old , Single </div>
+    </div>
+  </div>
+                    
+  <div class="step">
+    <div>
+      <div class="circle"><i class="fa fa-check"></i></div>
+    </div>
+    <div>
+      <div class="title">Others</div>
+      <div class="caption">Driver's license (B)</div>
+    </div>
+  </div>
+  <!-- End Stepper HTML -->
+          
+             
+          </div>
+      </div>
+      </div>
+      </section>
+        </div>      
+          <!-- /skills life -->
+      </div>
+  </section>
+</div>
+</div>
+<!-- services section -->
+<div class="about" id="onglets" data-index="3">
+    <h3 class="mt-2">Services section</h3>
+<div class="container-fluid p-5 bg-white mb-5">
+<div class="d-flex flex-column mb-4 flex-lg-row justify-content-between align-items-center">
+  <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+<span class="badge border border-warning  m-auto p-2 mb-2"><i class="fas fa-pen-alt"></i></span>
+<strong class="mb-2">Web Designer</strong>
+<p class="lead">Design web tmplates using CSS3 , JS and Bootstrap as a framework CSS with UI </p>
+  </div>
+  <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+    <span class="badge border border-warning  m-auto p-2 mb-2"><i class="fas fa-code"></i></span>
+    <strong class="mb-2">Web Develper</strong>
+    <p class="lead">Create web sites from 0 to 100% and deploy it in web , using a FullStack package  </p>
+      </div>
+      <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+        <span class="badge border border-warning  m-auto p-2 mb-2"><i class="far fa-file-word"></i></span>
+        <strong class="mb-2">Excel / Word</strong>
+        <p class="lead">A hove also a full idea about using Excel and office to : write , edit and design...  </p>
+          </div>
+</div>
+<div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+  <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+<span class="badge border border-warning  m-auto p-2 mb-2"><i class="fas fa-compact-disc"></i></span>
+<strong class="mb-2">Media Convertor</strong>
+<p class="lead">It is also very easy to me to convert any file or audio to different audio/file extentions </p>
+  </div>
+  <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+    <span class="badge border border-warning  m-auto p-2 mb-2"><i class="far fa-envelope"></i></span>
+    <strong class="mb-2">Mail system</strong>
+    <p class="lead">I can send mail to any one about ani subject using servers SMPTP/POP3  </p>
+      </div>
+      <div class="card col-lg-3 text-center p-3 mb-2" style="max-height: max-content;">
+        <span class="badge border border-warning  m-auto p-2 mb-2"><i class="fas fa-exchange-alt"></i></span>
+        <strong class="mb-2">Web Translator</strong>
+        <p class="lead">Translation it is a thing that i doing well with over than 10 languages without errors  </p>
+          </div>
+</div>
+</div>
+</div>
+<!-- projects section -->
+<div class="about" id="onglets" data-index="4">
+    <h3 >Projects section</h3>
+<div class="container-md  mb-5">
+  <p class="fs-2 text-decoration-underline ms-lg-3 text-danger">My last projects</p>
+<div class="row row-cols-lg-3 row-cols-1">
+<!-- project 1 -->
+<section class="mx-auto my-1" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/e-commerce2.PNG" class="img-fluid" style="height: 11rem;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>E-commerce site</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="#!" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>E-commerce full web site with admin Dashboard with AJAX PHP</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project1"><strong>Languages used </strong></p></a>
+<div class="collapse" id="project1">
+  <div class="d-flex flex-column justify-content-around justify-items-center">
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-html5 text-danger"></i> HTML
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-css3-alt text-primary"></i> CSS3
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-js-square text-warning"></i> JS
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-php text-info"></i> PHP
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fas fa-database text-danger"></i> MYSQL
+      </span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /project1 -->
+<!-- project 2 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/fsjegj.PNG" class="img-fluid" style="height: 11rem;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold "><a>University  system</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="#!" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>University system full web site with admin Dashboard and Dark/Light mode</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project2"><strong>Languages used </strong></p></a>
+<div class="collapse" id="project2">
+  <div class="d-flex flex-column justify-content-around justify-items-center">
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-html5 text-danger"></i> HTML
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-css3-alt text-primary"></i> CSS3
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-js-square text-warning"></i> JS
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fab fa-php text-info"></i> PHP
+    </span>
+    <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+      <i class="fas fa-database text-danger"></i> MYSQL
+      </span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /project 2 -->
+<!-- project 3 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/science.PNG" class="img-fluid" style="height: 11rem;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Science facts</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/4Science/4s.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Full template science facts with admin Dashboard</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project3"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project3">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 3 -->
+<!-- project 4 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/chat.PNG" class="img-fluid" style="height: 11rem;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Chat template</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/Chat/chat.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Chat application template without server connection</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project4"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project4">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 4 -->
+<!-- project 5 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/edit.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Online editor</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/Edit/edit.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Add / Edit and Remove text with pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project5"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project5">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 5 -->
+<!-- project 6 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/note.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Online Note</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/Eticket/eticket.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Create note with different colors with only pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project6"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project6">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 6 -->
+<!-- project 7 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/messenger.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Messenger app</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/messenger/mssg.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Real chat messenger application with pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project7"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project7">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 7 -->
+<!-- project 8 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/paginatio.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>MultyPages</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/pagination/page.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Images pagination with only pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project8"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project8">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 8 -->
+<!-- project 9 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/reveille.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>My alarme</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/réveille/rev.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Alarme powred by javascript it is funny experience !</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project9"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project9">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 9 -->
+<!-- project 10 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/quiz.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Timer Quiz</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/quiz 2/quiz.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Quiz web application with timer by javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project10"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project10">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 10 -->
+<!-- project 11 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/qr.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>QR Code</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/QR code/qr.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Made your own QR Code using pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project11"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project11">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 11 -->
+<!-- project 12 -->
+<section class="mx-auto my-1 mb-5" style="max-width: 23rem;">
+  <div class="card p-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="images/music.PNG" class="img-fluid" style="height: 11rem;width: 100%;"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body p-3">
+      <h5 class="card-title font-weight-bold"><a>Music app</a></h5>
+      <p class="card-text text-center w-100 text-decoration-underline">
+       <a href="projects/music/music.html" class="text-decoration-underline"><i class="fas fa-hand-holding-heart me-2 text-danger"></i>
+        Music app with random background using pure javascript</a>
+      </p>
+      <hr  />
+      <a href="#!"><p class="lead  dropdown-toggle" data-mdb-toggle="collapse" data-mdb-target="#project12"><strong>Languages used </strong></p></a>
+      <div class="collapse" id="project12">
+        <div class="d-flex flex-column justify-content-around justify-items-center">
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-html5 text-danger"></i> HTML
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-css3-alt text-primary"></i> CSS3
+          </span>
+          <span class="rounded-2 mb-2 text-warning shadow-1-strong p-2 text-center">
+            <i class="fab fa-js-square text-warning"></i> JS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /project 12 -->
+</div>
+</div>
+</div>
+<!-- contact section -->
+<div class="about p-3" id="onglets" data-index="5">
+    <h3 >Contact section</h3>
+<div class="row p-4 bg-white">
+  <div class="col-12">
+<div class="row row-cols-lg-3 p-3 ">
+  <section class="mx-auto mb-4" style="max-width: 70vh;">
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+          <div class="blockquote-custom-icon bg-info shadow-1-strong">
+            <i class="fas fa-envelope text-white"></i>
+          </div>
+          <p class="mb-0 mt-2 font-italic">
+            <span>E-mail address :</span> <br>
+         <a href="mailto:tlailia757@gmail.com">tlailia757@gmail.com</a>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto mb-4" style="max-width: 70vh;">
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+          <div class="blockquote-custom-icon bg-info shadow-1-strong">
+            <i class="fas fa-phone text-white"></i>
+          </div>
+          <p class="mb-0 mt-2 font-italic">
+            <span>Phone number :</span> <br>
+           <a href="tel:+21694143166">+ 216 94 143 166</a>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto mb-4" style="max-width: 70vh;">
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+          <div class="blockquote-custom-icon bg-info shadow-1-strong">
+            <i class="fas fa-map-marked-alt text-white"></i>
+          </div>
+          <p class="mb-0 mt-2 font-italic">
+            Rue Amar Sdiri 8160 Ghardimaou-Tunisie
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+</div>
+  </div>
+  <div class="col-12 mb-5">
+<!-- form -->
+<div class=" d-flex align-items-center  gradient-custom">
+  <div class="container-lg">
+    <div class="row justify-content-center">
+      <div class="col-12 ">
+        <form id="form">
+        <div class="card">
+          <div class="card-body p-4 p-md-5">
+            <p id="mail"></p>
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="name" class="form-control"  required/>
+                    <label class="form-label" for="lastName">Full Name</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="form-outline datepicker">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                     required/>
+                    <label for="birthdayDate" class="form-label">Email</label>
+                  </div>
+                </div>
+                    <div class="col-12 mb-4">
+                      <div class="form-outline">
+                        <textarea name="messsage" id="message" class="form-control" required></textarea>
+                        <label class="form-label" for="message">Message</label>
+                      </div>
+                      <div class="mt-4">
+                        <button class="btn btn-warning" type="submit" id="sendMail">Send</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- /form -->
+        </div>
+      </div>
+  </div>
+</div>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <script src="js/mdb.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-App</title>
+    <script src="https://kit.fontawesome.com/3343e0a8c5.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="chat (1).png">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!--  
+        <div class="container" id="container">
+        </div>
+    <div class="control">
+        <button type="button" onclick="apply()">Get chat</button>
+    </div>  -->
+    <h2 style="color: red;font-family: 'Courier New', Courier, monospace;margin-left: 25%;position: absolute;margin-top: -5px;">Click on the button to start Chat !</h2>
+    <div class="box" id="box">
+        <div class="head">
+            <img src="téléchargement.jpg" alt="user" style="width: 10%;height: 90%;border-radius: 50%;cursor: pointer;" title="User-Picture">
+            <h3 style="color: fuchsia;padding: 3px;margin-top: 3px;">Chat box</h3>
+            <i class="far fa-times-circle" style="color: red;font-size: 30px;margin-top: 5px;cursor: pointer;" id="close"></i>
+        </div>
+        <div class="myMessages" id="myMessages">
+            <h2 style="color: white;margin: 20% 0 0 20%;" id="empty">No messages !</h2>
+        </div>
+        <div class="mssg">
+            <input type="text" id="sweet" placeholder="Tape a sweet message ❤️">
+            <i class="fas fa-plus-square" style="color: red;cursor: pointer;" id="sendimg"></i>
+            <label for="file"><i class="fas fa-images" style="color: cyan;cursor: pointer;"></i></label>
+            <input type="file" style="display: none;" id="file">
+            <button type="button" id="btn" class="btn" onclick="send()">Send</button>
+        </div>
+    </div>
+<button type="button" id="open" class="open">Open chat</button>
+   
+    <script src="chat.js"></script>
+</body>
+</html>

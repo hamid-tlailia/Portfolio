@@ -1,0 +1,690 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: max-content;
+    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.sidenav{
+position: fixed;
+left: 0;
+top: 0;
+padding: 30px;
+z-index: 1;
+width: 40vh;
+background-color: rgba(0, 0, 0, 0.904);
+height: 100%;
+}
+.sidenav.active{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    z-index: 10;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.712);
+    height: 100%;
+    transition: .9s;
+    overflow-y: auto;
+    }
+.content{
+    position: relative;
+    left:auto;
+    margin: auto;
+    float: inline-end;
+}
+a {
+    cursor: pointer;
+}
+/* section about styling */
+.about{
+    position: fixed;
+    top: 20vh;
+    left: 40vh;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 10px;
+    height: 50%;
+    width: auto;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.about.active{
+    position: fixed;
+    top: 0;
+    left: 40vh;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    height: 110%;
+    transition: .8s;
+    width: auto;
+    opacity: 1;
+    z-index: 4;
+  
+}
+
+@media screen and (max-width:767px) {
+    .about{
+        position: fixed;
+        top: 150px;
+        left: 0;
+        width: auto;
+        right: 0;
+        padding: 10px;
+        height: 50%;
+      overflow-y: auto;
+    }
+    .about.active{
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        right: 0;
+        padding: 10px;
+        height: 100%;
+        overflow-y: auto;
+        transition: .5s;
+    }  
+}
+
+#tabs{
+    background-color: black;
+    color: white;
+    pointer-events: all;
+    transition: .5s;
+    border-radius: 10px;
+}
+#tabs.active{
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #2187e7;
+    color: goldenrod;
+    filter: brightness(2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px -8px #2187e7;
+}
+
+/* logo */
+.logo{
+    box-shadow: 0px 0px 50px -8px #e72184;
+    animation: music infinite linear 8s;
+    border-radius: 50%;
+    width: 250px;
+    height: 260px;
+}
+@keyframes music {
+  form {
+    box-shadow: 0px 0px 50px -8px #e72184;
+  }
+  to{
+    box-shadow: 0px 0px 50px -8px #2187e7;;
+  }
+}
+
+/* skills styling */
+h2 {
+    font-size: 2.7em;
+    font-weight: normal;
+    padding: 10px;
+    margin: 0 0 30px;
+    text-align:center;
+    color:white;
+    text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #2187e7;
+    background:black;
+    border-radius:2px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+  }
+  h3 {
+    font-size: 2.7em;
+    font-weight: normal;
+    padding: 10px 0 16px 0;
+    margin: 0 0 30px;
+    text-align:center;
+    color:#2187e7;
+    border-radius:2px; 
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.07),0 1px 1px 0 rgba(0,0,0,.04)!important; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+   
+  .container {
+    width: auto;
+    padding:5%;
+    margin: 5vh auto ;
+    left: 0; 
+    overflow: hidden;
+        background: white;
+        font: 12px normal Arial;
+        font-family: "Raleway",Arial,Helvetica,sans-serif;
+        color:cyan;
+      
+  }
+  
+  .col {
+    width: 23%;
+    margin: 0 5%;
+    position: relative;
+    float: left;
+    font-size: 12px;
+    line-height: 2em;
+    padding: 5% 0;
+  } 
+  /* skills styling */
+  li {
+
+    width: 50%;
+    float: left;
+    list-style-type: none;
+    
+    padding-right: 5.3333333%;
+  }
+  
+  li:nth-child(even) { margin-bottom: 5em;}
+  
+  h2 {
+    margin: 0 0 1.5em;
+    border-bottom: 1px solid #ccc;
+    
+    padding: 0 0 .25em;
+  }
+  
+  /* Styling an indeterminate progress bar */
+  
+  progress:not(value) {
+    /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+    color: red;
+  }
+  
+  /* Styling the determinate progress element */
+  
+  progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+    
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+    
+    /* Add dimensions */
+    width: 100%; height: 20px;
+    
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+      background-color: whiteSmoke;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+    
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+    color: royalblue;
+    
+    position: relative;
+    margin: 0 0 1.5em; 
+  }
+  
+  /*
+  Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+  -webkit-progress-bar -> To style the progress element container
+  -webkit-progress-value -> To style the progress element value.
+  */
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    position: relative;
+    
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px;
+    
+    /* Let's animate this */
+    animation: animate-stripes 5s linear infinite;
+  }
+  
+  @keyframes animate-stripes { 100% { background-position: -100px 0; } }
+  
+  /* Let's spice up things little bit by using pseudo elements. */
+  
+  progress[value]::-webkit-progress-value:after {
+    /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+    content: '';
+    position: absolute;
+    
+    width:5px; height:5px;
+    top:7px; right:7px;
+    
+    background-color: white;
+    border-radius: 100%;
+  }
+  
+  /* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+  
+  progress[value]::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    background-image:
+    -moz-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -moz-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -moz-linear-gradient( left, #09c, #f44);
+    
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px;
+    
+    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+  }
+  
+  /* Fallback technique styles */
+  .progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+  
+    /* Dimensions should be similar to the parent progress element. */
+    width: 100%; height:20px;
+  }
+  
+  .progress-bar span {
+    background-color: royalblue;
+    border-radius: 3px;
+    
+    display: block;
+    text-indent: -9999px;
+  }
+  
+  p[data-value] { 
+    
+    position: relative; 
+  }
+  
+  /* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+  
+  p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute; right:0;
+  }
+  
+  
+  
+  
+  
+  .html5::-webkit-progress-value,
+  .python::-webkit-progress-value  {
+    /* Gradient background with Stripes */
+    background-image:
+    -webkit-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -webkit-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -webkit-linear-gradient( left, #09c, #f44);
+  }
+  
+  .css3::-webkit-progress-value,
+  .php::-webkit-progress-value 
+  {
+    /* Gradient background with Stripes */
+    background-image:
+    -webkit-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -webkit-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -webkit-linear-gradient( left, #09c, #ff0);
+  }
+  
+  .jquery::-webkit-progress-value,
+  .node-js::-webkit-progress-value 
+  {
+    /* Gradient background with Stripes */
+    background-image:
+    -webkit-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -webkit-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -webkit-linear-gradient( left, #09c, #690);
+  }
+  
+  /* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
+  
+  .html5::-moz-progress-bar,
+  .php::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    background-image:
+    -moz-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -moz-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -moz-linear-gradient( left, #09c, #f44);
+  }
+  
+  .css3::-moz-progress-bar,
+  .php::-moz-progress-bar {
+  
+    /* Gradient background with Stripes */
+    background-image:
+    -moz-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -moz-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -moz-linear-gradient( left, #09c, #ff0);
+  }
+  
+  .jquery::-moz-progress-bar,
+  .node-js::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    background-image:
+    -moz-linear-gradient( 135deg,
+                             transparent,
+                             transparent 33%,
+                             rgba(0,0,0,.1) 33%,
+                             rgba(0,0,0,.1) 66%,
+                             transparent 66%),
+      -moz-linear-gradient( top,
+                              rgba(255, 255, 255, .25),
+                              rgba(0,0,0,.2)),
+       -moz-linear-gradient( left, #09c, #690);
+  }
+  
+  /* Now we are good to duplicate html code for other skills and then add the css code for the new skill based on data-skill */
+  
+    
+  /* THE END */
+  /* intro  */
+  h5 {
+    font-weight: 200;
+    text-align: left;
+    font-family: Poppins, sans-serif;
+    font-size: 1.9em;
+    color: goldenrod;
+    padding: 0;
+    line-height: 0.8em !important;
+    text-transform: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.intro{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h5 span {
+    color: red;
+    animation-delay: 2s;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -40px;
+  left: 19px;
+}
+/* abou us  */
+
+
+
+.about-us .heading h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+}
+
+.about-us .heading h2 span {
+  color: #F24259;
+}
+
+.about-us .heading p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+}
+
+.about-us h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 15px;
+  padding: 0;
+}
+
+.about-us h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.about-us h4 i {
+  color: #F24259;
+  margin-right: 10px;
+}
+
+/* stepper */
+/* Steps */
+.step {
+  position: relative;
+  min-height: 1em;
+  color: rgb(177, 32, 112);
+}
+.step + .step {
+  margin-top: 1.5em
+}
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+.step > div:not(:first-child) {
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+
+
+/* Circle */
+.circle {
+  background: rgba(0, 0, 0, 0.699);
+  position: relative;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5em;
+  border-radius: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+/* Vertical Line */
+.circle:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 50%;
+  bottom: 1px;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  transform: scale(1, 2);
+  transform-origin: 50% -100%;
+  background-color: white;
+  z-index: 1;
+}
+.step:last-child .circle:after {
+  display: none
+}
+
+/* Stepper Titles */
+.title {
+  line-height: 1.5em;
+  font-weight: bold;
+  color: fuchsia !important;
+}
+.caption {
+  font-size: 0.8em;
+  color: white !important;
+}
+
+/* button cv */
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.button {
+  min-width: 50px;
+  min-height: 60px;
+  max-width: 280px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: white;
+  background: #271f91;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(196, 16, 202) 100%);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 15px;
+  min-width: calc(240px);
+  min-height: calc(60px + 12px);
+  border: 2px solid #00FFCB;
+  box-shadow: 3px 3px red, -1em 0 1em rgb(228, 243, 243);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: whitesmoke;
+  transform: translateY(-6px);
+  
+}
+
+.button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #c710df;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* badge services */
+.badge:nth-child(1){
+  --mdb-text-opacity: 1;
+  color: rgba(var(--mdb-warning-rgb),var(--mdb-text-opacity))!important;
+  padding: 10px;
+  font-size: 19px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+.badge:nth-child(2){
+  --mdb-text-opacity: 1;
+  color: red!important;
+  padding: 10px;
+  font-size: 19px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+.badge:hover , .badge i:hover{
+  --mdb-text-opacity: 1;
+    background-color: rgba(var(--mdb-warning-rgb),var(--mdb-text-opacity))!important;
+    color: white !important;
+    cursor: pointer;
+}
