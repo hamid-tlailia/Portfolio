@@ -133,7 +133,7 @@ Message : message.value
 btn_send.disabled=true
 emailjs.send("service_wkwt0sq","template_lzlq58w",params)
 .then(function (){
-area_result.innerHTML = `<div class="note note-success text-start p-2">Thank you , we have successfully receive your message</div>`,
+area_result.innerHTML = `<div class="note note-success text-start p-2">Thank you , we have successfully received your message</div>`,
   form.reset()
   btn_send.disabled=false
 })
